@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>获取用户姓名并问候</title>
+  </head>
+  <body>
+    <script>
+      // 使用 prompt 获取用户的姓名
+      var userName = prompt("请输入您的姓名:", "");
+
+      // 如果用户输入了姓名，则进行问候
+      if (userName != null && userName != "") {
+        alert("您好, " + userName + "!");
+      } else {
+        alert("您没有输入姓名。");
+      }
+    </script>
+  </body>
+</html>

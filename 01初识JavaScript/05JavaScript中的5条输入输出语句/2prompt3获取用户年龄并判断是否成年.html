@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>获取用户年龄并判断是否成年</title>
+    <script>
+      // 使用 prompt 获取用户的年龄
+      var userAge = parseInt(prompt("请输入您的年龄:", ""), 10);
+
+      // 检查用户是否输入了有效的年龄（数字）
+      if (isNaN(userAge)) {  //isNaN:判断是否为数字
+        alert("请输入有效的年龄数字。");
+      } else if (userAge < 18) {
+        alert("您还未成年。");
+      } else {
+        alert("您已经成年了！");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
