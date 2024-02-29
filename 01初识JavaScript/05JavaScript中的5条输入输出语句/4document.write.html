@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document.write函数的使用</title>
+    <script>
+      /*
+        document.write
+Document.write() 方法将一个文本字符串写入一个由 document.open() 打开的文档流（document stream）。
+
+*****注意：因为 document.write 需要向文档流中写入内容，所以，若在一个已关闭（例如，已完成加载）的文档上调用 document.write，就会自动调用 document.open，这将清空该文档的内容 (en-US)。
+
+语法
+document.write(markup);
+markup: 一个包含要写入文档的文本的字符串。
+        */
+    </script>
+  </head>
+  <body>
+    <button onclick="openNewWindow()">打开新窗口</button>
+
+    <script>
+      function openNewWindow() {
+        // 打开一个新窗口
+        var newWindow = window.open("", "_blank");
+
+        // 使用 document.write 向新窗口写入内容
+        newWindow.document.write("<h1>欢迎来到新页面！</h1>");
+        newWindow.document.write(
+          "<p>这是通过 document.write 方法动态生成的内容。</p>"
+        );
+
+        // 关闭输出流，这样页面就不会一直处于加载状态
+        newWindow.document.close();
+      }
+    </script>
+  </body>
+</html>
