@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+        在JavaScript中，行内式（Inline）通常指的是直接在HTML元素的事件属性中编写JavaScript代码。
+        这种方式虽然方便，但通常不推荐用于大型项目，因为它会导致HTML和JavaScript的耦合，使代码难以维护。
+        然而，对于简单的交互或快速原型开发，行内式仍然是一个可行的选择。
+    -->
+    <h2>点击按钮更改文本</h2>
+    <button onclick="changeText()">点击我!</button>
+    <p id="demo">这是一个段落。</p>
+
+    <script>
+      function changeText() {
+        document.getElementById("demo").innerHTML = "按钮被点击了!";
+      }
+    </script>
+    <!--在这个示例中，当用户点击按钮时，onclick事件触发changeText函数。
+        这个函数会找到ID为demo的<p>元素，并将其内容更改为“按钮被点击了!”。-->
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--例子 1: 显示当前日期和时间-->
+    <h1>当前日期和时间</h1>
+    <p id="dateTime"></p>
+
+    <script>
+      // 获取当前日期和时间
+      var currentDateTime = new Date();
+
+      // 将日期和时间格式化为字符串
+      var formattedDateTime = currentDateTime.toLocaleString();
+
+      // 获取页面上的元素
+      var dateTimeElement = document.getElementById("dateTime");
+
+      // 将格式化后的日期和时间设置到元素中
+      dateTimeElement.innerHTML = formattedDateTime;
+    </script>
+    <!--
+        在这个例子中，JavaScript代码创建了一个新的Date对象来获取当前的日期和时间。
+        然后，它使用toLocaleString方法将日期和时间格式化为本地化的字符串。
+        接着，它使用document.getElementById方法来获取页面上的一个<p>元素，并将其ID设置为dateTime。
+            最后，它将格式化后的日期和时间设置为该元素的innerHTML，从而在页面上显示当前日期和时间。
+    -->
+</body>
+</html>

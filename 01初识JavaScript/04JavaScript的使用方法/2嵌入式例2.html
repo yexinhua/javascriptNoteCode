@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>简单计算器</title>
+  </head>
+  <body>
+    <h1>简单计算器</h1>
+    <input type="number" id="num1" placeholder="输入第一个数字" />
+    <input type="number" id="num2" placeholder="输入第二个数字" />
+    <button onclick="calculate()">计算</button>
+    <p id="result"></p>
+
+    <script>
+      function calculate() {
+        // 获取输入框中的值
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+
+        // 将字符串转换为数字
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+
+        // 执行加法运算
+        var result = num1 + num2;
+
+        // 显示结果
+        document.getElementById("result").innerHTML = "结果: " + result;
+      }
+    </script>
+    <!--
+        在这个例子中，JavaScript代码定义了一个calculate函数，该函数在点击按钮时被触发。
+        函数首先获取两个输入框中的值，并将它们从字符串转换为数字。
+        然后，它执行加法运算，并将结果显示在页面上的一个<p>元素中。
+    -->
+  </body>
+</html>
