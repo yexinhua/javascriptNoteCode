@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window.alert()的使用</title>
+    <script>
+      /*
+        alert 是 JavaScript 中的一个内置函数，用于在浏览器中显示一个警告框。
+        当调用 alert 函数时，它会暂停代码的执行，直到用户点击了警告框上的“确定”按钮。
+        这通常用于调试目的或为用户提供某种简单的信息提示。
+
+        语法：
+            alert(message);
+            其中 message 是你想在警告框中显示的内容。
+        */
+
+      //示例
+      //1、简单的提示：
+      alert("Hello, World!"); //会在浏览器上显示一个包含“Hello, World!”的警告框
+
+      //2、变量显示
+      let name = "Yexinhua";
+      alert("Hello, " + name + "!"); //会显示一个警告框，内容为“Hello, Yexinhua!”。
+
+      //3、条件判断：
+      let age = 25;
+      if (age < 18) {
+        alert("你还未成年！");
+      } else {
+        alert("你已经是成年人了！");
+      } //根据 age 的值，上述代码会显示相应的警告框。
+
+      //4、从函数返回：
+      function checkValue(value) {
+        if (value < 0) {
+          alert("值不能为负！");
+          return false;
+        }
+        return true;
+      }
+
+      let isValid = checkValue(-5);
+      if (!isValid) {
+        alert("输入的值无效");
+      }//此示例中的 checkValue 函数会在值小于0时显示警告框，并返回 false。然后，主代码会根据返回的值再次显示警告框。
+
+      /*
+      Note:尽管 alert 是一个非常有用的调试工具，但在实际的生产环境中，它可能会中断用户的体验，因此不建议频繁使用。
+      更现代的 UI/UX 设计倾向于使用模态窗口、提示框或其他方式来与用户交互。
+      *
+
+    </script>
+  </head>
+  <body></body>
+</html>
