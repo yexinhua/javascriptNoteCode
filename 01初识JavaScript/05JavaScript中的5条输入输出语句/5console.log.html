@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>console.log方法的使用</title>
+    <script>
+      /*
+        console.log
+console.log() 方法向 Web 控制台输出一条信息。这条信息可能是单个字符串（包括可选的替代字符串），也可能是一个或多个对象。
+        */
+      // 简单的输出文本信息
+      console.log("Hello, world!");
+
+      // 输出数字
+      console.log(42);
+
+      // 输出变量
+      var name = "Alice";
+      console.log(name);
+
+      // 输出多个值，它们会被空格分隔
+      console.log("Name:", name, "Age:", 30);
+
+      // 输出一个对象
+      var person = {
+        name: "Bob",
+        age: 25,
+        occupation: "Engineer",
+      };
+      console.log(person);
+
+      // 输出一个数组
+      var fruits = ["apple", "banana", "cherry"];
+      console.log(fruits);
+
+      // 使用console.log输出对象的特定属性
+      console.log(person.name); // 输出 "Bob"
+      console.log(fruits[1]); // 输出 "banana"
+    </script>
+  </head>
+  <body></body>
+</html>
