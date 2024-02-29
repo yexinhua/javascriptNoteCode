@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>confirm确认表单提交</title>
+    <script>
+      // 在表单提交前使用 confirm 进行确认
+      function confirmSubmit() {
+        var confirmResult = confirm("您确定要提交表单吗？");
+        return confirmResult;
+      }
+    </script>
+  </head>
+  <body>
+    <!--在 HTML 表单中使用 onsubmit 事件调用 confirmSubmit 函数-->
+    <form onsubmit="return confirmSubmit()" method="post" action="https://www.baidu.com">
+      <!-- 表单字段 -->
+      <input type="submit" value="提交" />
+    </form>
+  </body>
+</html>
