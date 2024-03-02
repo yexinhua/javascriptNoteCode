@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>常量</title>
+    <script>
+      //const
+      //常量是块级范围的，非常类似用 let 语句定义的变量。但常量的值是无法（通过重新赋值）改变的，也不能被重新声明。
+      const PI = 3.14159;
+      console.log(PI); // 输出: 3.14159
+
+      // 下面的代码将会导致错误，因为不能重新赋值给const声明的常量
+      // PI = 2.71828; // TypeError: Assignment to constant variable.
+
+      const person = {
+        name: "Alice",
+        age: 30,
+      };
+
+      console.log(person.name); // 输出: Alice
+
+      // 我们可以修改对象的属性
+      person.age = 31;
+      console.log(person.age); // 输出: 31
+
+      // 但是我们不能让person指向另一个对象
+      // person = { name: "Bob", age: 25 }; // TypeError: Assignment to constant variable.
+    </script>
+  </head>
+  <body></body>
+</html>
